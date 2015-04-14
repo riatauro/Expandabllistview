@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.horoscope" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/edition">
+    <activity
+        android:name="com.example.user.horoscope.Splash_Screen"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+
+        <activity
+            android:name="com.example.user.horoscope.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+
+        <activity
+            android:name="com.example.user.horoscope.News"
+
+            android:theme="@android:style/Theme.NoTitleBar">
+
+        </activity>
+        <activity
+            android:name="com.example.user.horoscope.Categories"
+
+            android:theme="@android:style/Theme.NoTitleBar">
+
+        </activity>
+        <activity
+            android:name="com.example.user.horoscope.SingleActivity"
+            android:label="News">
+
+        </activity>
+    </application>
+
+</manifest>
