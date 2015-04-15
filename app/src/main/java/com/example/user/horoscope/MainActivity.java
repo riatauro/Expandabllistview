@@ -93,6 +93,11 @@ public class MainActivity extends Activity implements
 
                     startActivity(intent);
                 }
+                if(groupPosition==2)
+                {
+                    Intent intent=new Intent(getApplicationContext(),Another.class);
+                    startActivity(intent);
+                }
                 return false;
             }
         });
@@ -145,8 +150,22 @@ public class MainActivity extends Activity implements
         country = new Country("SPORTS");
         countryList.add(country);
 
+
         continent = new Continent("CATEGORIES",countryList);
         continentList.add(continent);
+
+        countryList = new ArrayList<Country>();
+        country = new Country("HINDI ENTERTAINMENT");
+        countryList.add(country);
+        country = new Country("NEWS");
+        countryList.add(country);
+        country = new Country("ENGLISH ENTERTAINMENT");
+        countryList.add(country);
+        continent = new Continent("TV SHOWS",countryList);
+        continentList.add(continent);
+
+
+
 
     }
 

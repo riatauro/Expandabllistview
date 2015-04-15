@@ -2,9 +2,12 @@ package com.example.user.horoscope;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -136,32 +139,32 @@ public class Categories extends ListActivity {
         ListView lv = getListView();
 
         // Listview on item click listener
-/*        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // getting values from selected ListItem
-                String date = ((TextView) view.findViewById(R.id.publish_date))
-                        .getText().toString();
-                String source = ((TextView) view.findViewById(R.id.src))
-                        .getText().toString();
+//                String date = ((TextView) view.findViewById(R.id.publish_date))
+//                        .getText().toString();
+//                String source = ((TextView) view.findViewById(R.id.src))
+//                        .getText().toString();
                 String desc = ((TextView) view.findViewById(R.id.summary))
                         .getText().toString();
-                String ttle = ((TextView) view.findViewById(R.id.title))
-                        .getText().toString();
-
-
-                // Starting single contact activity
+//                String ttle = ((TextView) view.findViewById(R.id.title))
+//                        .getText().toString();
+//
+//
+//                // Starting single contact activity
                 Intent in = new Intent(getApplicationContext(),SingleActivity.class);
-              //  in.putExtra(TAG_PUBLISH_DATE, date);
+//              //  in.putExtra(TAG_PUBLISH_DATE, date);
              //   in.putExtra(TAG_SOURCE, source);
-                in.putExtra(TAG_SUMMARY, desc);
-                in.putExtra(TAG_TITLE,ttle);
+                in.putExtra("TAG", desc);
+               // in.putExtra(TAG_TITLE,ttle);
                 startActivity(in);
 
             }
-        });*/
+        });
 
         // Calling async task to get json
         new GetContacts().execute();

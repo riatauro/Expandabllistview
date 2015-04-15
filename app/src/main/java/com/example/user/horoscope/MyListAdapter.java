@@ -122,6 +122,10 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                 image1.setImageResource(R.drawable.sport);
             }
         }
+        if(groupPosition==2)
+        {
+
+        }
 
             TextView name = (TextView) view.findViewById(R.id.name);
 
@@ -176,6 +180,10 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         {
             ImageView image1=(ImageView)view.findViewById(R.id.image1);
             image1.setImageResource(R.drawable.cat);
+
+        }
+        if(groupPosition==2)
+        {
 
         }
         TextView heading = (TextView) view.findViewById(R.id.heading);
