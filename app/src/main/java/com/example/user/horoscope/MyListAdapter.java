@@ -124,7 +124,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         }
         if(groupPosition==2)
         {
-
+            ImageView image1 = (ImageView) view.findViewById(R.id.image2);
+            image1.setImageResource(R.drawable.screen);
         }
 
             TextView name = (TextView) view.findViewById(R.id.name);
@@ -184,6 +185,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         }
         if(groupPosition==2)
         {
+            ImageView image1=(ImageView)view.findViewById(R.id.image1);
+            image1.setImageResource(R.drawable.screen);
 
         }
         TextView heading = (TextView) view.findViewById(R.id.heading);

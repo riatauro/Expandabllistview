@@ -50,6 +50,10 @@
             </activity>
         <activity android:name=".Shows"
             ></activity>
+        <activity android:name=".Shows1"
+            ></activity>
+        <activity android:name=".english"
+            ></activity>
     </application>
 
 </manifest>

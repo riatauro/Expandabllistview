@@ -95,8 +95,18 @@ public class MainActivity extends Activity implements
                 }
                 if(groupPosition==2)
                 {
-                    Intent intent=new Intent(getApplicationContext(),Another.class);
-                    startActivity(intent);
+                    if(childPosition==0)
+                    {
+                        Intent intent = new Intent(getApplicationContext(), Another.class);
+
+                        startActivity(intent);
+                    }
+                    if(childPosition==1)
+                    {
+                        Intent intent = new Intent(getApplicationContext(), english.class);
+
+                        startActivity(intent);
+                    }
                 }
                 return false;
             }
@@ -157,9 +167,9 @@ public class MainActivity extends Activity implements
         countryList = new ArrayList<Country>();
         country = new Country("HINDI ENTERTAINMENT");
         countryList.add(country);
-        country = new Country("NEWS");
-        countryList.add(country);
         country = new Country("ENGLISH ENTERTAINMENT");
+        countryList.add(country);
+        country = new Country("NEWS");
         countryList.add(country);
         continent = new Continent("TV SHOWS",countryList);
         continentList.add(continent);
