@@ -40,19 +40,33 @@
         </activity>
         <activity
             android:name="com.example.user.horoscope.SingleActivity"
-            android:label="News">
+            android:theme="@android:style/Theme.NoTitleBar">
 
         </activity>
         <activity android:name=".Another"
-            android:label="Shows"
+            android:theme="@android:style/Theme.NoTitleBar"
             >
 
             </activity>
-        <activity android:name=".Shows"
+        <activity android:name=".Shows2"
+            android:theme="@android:style/Theme.NoTitleBar"
             ></activity>
+        <activity android:name=".shows3"
+            android:theme="@android:style/Theme.NoTitleBar"
+            ></activity>
+        <activity android:name=".new1"
+            android:theme="@android:style/Theme.NoTitleBar"
+            ></activity>
+
+
+
+
         <activity android:name=".Shows1"
+            android:theme="@android:style/Theme.NoTitleBar"
             ></activity>
+
         <activity android:name=".english"
+            android:theme="@android:style/Theme.NoTitleBar"
             ></activity>
     </application>
 

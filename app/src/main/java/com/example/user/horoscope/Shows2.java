@@ -24,7 +24,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Shows1 extends Activity {
+public class Shows2 extends Activity {
 
     ArrayList<Actors> actorsList;
 
@@ -40,40 +40,45 @@ public class Shows1 extends Activity {
         int pos=intent.getIntExtra("pos",0);
         int text=intent.getIntExtra("Tag",0);
         if(pos==0) {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=axn&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=colors&date=" + text;
         }
         if(pos==1)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=comedy-central&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=sony-tv-hd&date=" + text;
         }
         if(pos==2)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=star-movies&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=zee-tv&date=" + text;
         }
         if(pos==3)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=star-world&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=star-plus-hd&date=" + text;
         }
         if(pos==4)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=hbo&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=life-ok&date=" + text;
         }
         if(pos==5)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=food-food&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=sony-max&date=" + text;
         }
         if(pos==6)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=wb&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=zee-cinema&date=" + text;
         }
         if(pos==7)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=world-movies&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=9xm&date=" + text;
         }
         if(pos==8)
         {
-            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=vh1&date=" + text;
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=channel-[v]&date=" + text;
         }
+        if(pos==9)
+        {
+            url = "http://indian-television-guide.appspot.com/indian_television_guide?channel=mtv&date=" + text;
+        }
+
 
         actorsList = new ArrayList<Actors>();
         new JSONAsyncTask().execute(url);
@@ -102,7 +107,7 @@ public class Shows1 extends Activity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            dialog = new ProgressDialog(Shows1.this);
+            dialog = new ProgressDialog(Shows2.this);
             dialog.setMessage("Loading, please wait");
             dialog.show();
             dialog.setCancelable(false);
@@ -170,3 +175,4 @@ public class Shows1 extends Activity {
 
 
 }
+

@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -26,6 +29,8 @@ public class  News extends ListActivity{
 
 
     private static String url;
+    private Menu optionsMenu;
+
 
 
 
@@ -144,14 +149,14 @@ public class  News extends ListActivity{
                     //    .getText().toString();
                 String desc = ((TextView) view.findViewById(R.id.summary))
                         .getText().toString();
-                //String ttle = ((TextView) view.findViewById(R.id.title))
-                    //    .getText().toString();
+                String ttle = ((TextView) view.findViewById(R.id.author))
+                    .getText().toString();
 
 
                 // Starting single contact activity
                 Intent in = new Intent(getApplicationContext(),SingleActivity.class);
              //   in.putExtra(TAG_PUBLISH_DATE, date);
-             //   in.putExtra(TAG_SOURCE, source);
+                in.putExtra("TAG1", ttle);
                 in.putExtra("TAG", desc);
 
               //  in.putExtra(TAG_TITLE,ttle);
@@ -177,6 +182,23 @@ public class  News extends ListActivity{
 //
 //    }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.optionsMenu = menu;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_refresh, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_refresh:
+
+                new GetContacts().execute();
+                // Complete with your code
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     /**
      * Async task class to get json by making HTTP call
@@ -252,8 +274,8 @@ public class  News extends ListActivity{
              * */
             ListAdapter adapter = new SimpleAdapter(
                     News.this, articleList,
-                    R.layout.row, new String[] { TAG_PUBLISH_DATE, TAG_SOURCE,
-                    TAG_SUMMARY }, new int[] { R.id.publish_date,
+                    R.layout.row, new String[] {TAG_TITLE, TAG_PUBLISH_DATE, TAG_SOURCE,
+                    TAG_SUMMARY }, new int[] {R.id.author, R.id.publish_date,
                     R.id.src, R.id.summary });
 
             setListAdapter(adapter);

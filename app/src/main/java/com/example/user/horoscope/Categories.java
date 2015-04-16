@@ -151,14 +151,14 @@ public class Categories extends ListActivity {
 //                        .getText().toString();
                 String desc = ((TextView) view.findViewById(R.id.summary))
                         .getText().toString();
-//                String ttle = ((TextView) view.findViewById(R.id.title))
-//                        .getText().toString();
+               String ttle = ((TextView) view.findViewById(R.id.author))
+                        .getText().toString();
 //
 //
 //                // Starting single contact activity
                 Intent in = new Intent(getApplicationContext(),SingleActivity.class);
 //              //  in.putExtra(TAG_PUBLISH_DATE, date);
-             //   in.putExtra(TAG_SOURCE, source);
+               in.putExtra("TAG1", ttle);
                 in.putExtra("TAG", desc);
                // in.putExtra(TAG_TITLE,ttle);
                 startActivity(in);
@@ -251,8 +251,8 @@ public class Categories extends ListActivity {
              * */
             ListAdapter adapter = new SimpleAdapter(
                     Categories.this, articleList,
-                    R.layout.row, new String[] { TAG_PUBLISH_DATE, TAG_SOURCE,
-                    TAG_SUMMARY }, new int[] { R.id.publish_date,
+                    R.layout.row, new String[] {TAG_TITLE, TAG_PUBLISH_DATE, TAG_SOURCE,
+                    TAG_SUMMARY }, new int[] {R.id.author, R.id.publish_date,
                     R.id.src, R.id.summary });
 
             setListAdapter(adapter);

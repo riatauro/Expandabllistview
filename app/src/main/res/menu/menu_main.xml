@@ -5,6 +5,6 @@
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_share"
         android:title="Share"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         android:actionProviderClass="android.widget.ShareActionProvider"/>
 </menu>

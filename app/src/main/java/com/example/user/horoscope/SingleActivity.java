@@ -14,17 +14,20 @@ public class SingleActivity extends Activity implements
         AdapterView.OnItemClickListener {
 
     TextView t1,t2;
-    String text;
+    String text,text1;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single);
        Intent intent=getIntent();
 
-      text =intent.getStringExtra("TAG");
+        text =intent.getStringExtra("TAG1");
+        text1 =intent.getStringExtra("TAG");
         t1=(TextView)findViewById(R.id.text1);
         t1.setText(text);
 
-        t2=(TextView)findViewById(R.id.text2);
+        t1=(TextView)findViewById(R.id.text2);
+        t1.setText(text1);
+
 
 
     }

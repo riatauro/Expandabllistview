@@ -35,7 +35,7 @@ public class MainActivity extends Activity implements
         displayList();
 
         //expand all Groups
-        expandAll();
+
 
 
     }
@@ -104,6 +104,12 @@ public class MainActivity extends Activity implements
                     if(childPosition==1)
                     {
                         Intent intent = new Intent(getApplicationContext(), english.class);
+
+                        startActivity(intent);
+                    }
+                    if(childPosition==2)
+                    {
+                        Intent intent = new Intent(getApplicationContext(), new1.class);
 
                         startActivity(intent);
                     }
