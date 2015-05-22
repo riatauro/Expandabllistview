@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,7 +71,7 @@ public class new1 extends Activity implements
     protected void showCustomDialog(final int position) {
         // TODO Auto-generated method stub
         final Dialog dialog = new Dialog(new1.this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setTitle("Enter today's date");
         dialog.setContentView(R.layout.customdialog);
 
         final EditText editText = (EditText)dialog.findViewById(R.id.editText1);
